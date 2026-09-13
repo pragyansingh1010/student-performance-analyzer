@@ -1,0 +1,11 @@
+name: Performance Analyzer Smoke Tests
+on:
+  push:
+    branches: [main]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run smoke test
+        run: python tests/repository_smoke.py
